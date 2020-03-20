@@ -30,7 +30,6 @@ local med_income : di %6.0fc `r(p50)'
 gen higher_income = hh_income > `med' if ~mi(hh_income)
 
 * three racial groups: 
-* Black and non_black
 gen race_black = 1 if race_ethnicity=="African American/Black"
 replace race_black= 0 if race_ethnicity!="African American/Black" & ~mi(race_ethnicity)
 gen race_white = 1 if race_ethnicity=="White"
